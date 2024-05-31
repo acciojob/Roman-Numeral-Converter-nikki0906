@@ -10,7 +10,18 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  //your code here
+  //write your code here
+
+	let result = '';
+
+    for (const [roman, value] of romanNumerals) {
+        while (num >= value) {
+            result += roman;
+            num -= value;
+        }
+    }
+
+    return result;
 	
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
